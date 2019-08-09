@@ -4,7 +4,7 @@ import * as text from './text';
 
 // ============================================================
 // Exports
-export {
+export default {
     account,
     identity,
     text,

@@ -13,6 +13,7 @@
   "main": "./dist/index.js",
   "scripts": {
     "build": "gulp build",
+    "build:watch": "gulp build:watch",
     "clean": "gulp clean",
     "doc:jsdoc": "jsdoc -c jsdoc.config.json --readme README.md",
     "lint": "run-s lint:*",
@@ -54,7 +55,10 @@
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-cli": "^2.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-print": "^5.0.2",
     "gulp-sourcemaps": "^2.6.5",
+    "gulp-watch": "^5.0.1",
     "jsdoc": "^3.6.3",
     "jsdoc-oblivion": "0.0.9",
     "minami": "^1.1.1",
