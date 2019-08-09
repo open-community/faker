@@ -1,4 +1,4 @@
- // ============================================================
+// ============================================================
 // Import packages
 import faker from 'faker';
 import _ from 'lodash';
@@ -64,9 +64,9 @@ function generate({
 
     // ====================
     // Property: oners
-    fake.owners = _.unique(owners).map((owner) => {
+    fake.owners = _.uniq(owners).map((owner) => {
         // Creating the account
-        accounts[owner] = toApiId(ResourceType.ACCOUNT, owner);
+        accounts[owner] = api.toApiId(ResourceType.ACCOUNT, owner);
         return accounts[owner];
     });
 
@@ -75,12 +75,12 @@ function generate({
     fake.authors = authors.map(({ account, identity }) => {
         // Creating account if not existing already
         if (!accounts[account]) {
-            accounts[account] = toApiId(ResourceType.ACCOUNT, account);
+            accounts[account] = api.toApiId(ResourceType.ACCOUNT, account);
         }
 
         // Creating the identity if not existing already
         if (!identities[identity]) {
-            identities[identity] = toApiId(ResourceType.IDENTITY, identity);
+            identities[identity] = api.toApiId(ResourceType.IDENTITY, identity);
         }
 
         return {
@@ -91,7 +91,7 @@ function generate({
 
     // ====================
     // Property: context
-    fake.contexts = contexts.map(type => toApiId(type, faker.random.uuid()));
+    fake.contexts = contexts.map(type => api.toApiId(type, faker.random.uuid()));
 
     return fake;
 }

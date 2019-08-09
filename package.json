@@ -7,9 +7,6 @@
   "homepage": "https://open-community.github.io/faker",
   "bugs": "https://github.com/OpenCommunity/faker/issues",
   "private": true,
-  "bin": {
-    "hello": "./dist/cli.js"
-  },
   "main": "./dist/index.js",
   "scripts": {
     "build": "gulp build",
