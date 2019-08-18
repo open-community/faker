@@ -6,6 +6,7 @@ import { ResourceType, api } from '@open-community/service-tools';
 
 // ============================================================
 // Functions
+
 function id() {
     return api.toApiId(
         ResourceType.TEXT,
@@ -20,7 +21,8 @@ function id() {
  *                                The final result will have between 0 and titleWordsMax words
  * @param {number} paragraphMax - Maxmimum number of paragraphs in the text.
  *                                The final result will have between 0 and paragraphMax paragrpahs
- * @param {ResourceId[]} owners - List of owners. Each element will be used as a ResourceId to build the final ApiId that
+ * @param {ResourceId[]} owners - List of owners. Each element will be used as a
+ *                                ResourceId to build the final ApiId that
  *                                will be in the Text object
  * @param {Array.<{account: ResourceId, identity: ResourceId}>} authors - List of all auhtors
  */
